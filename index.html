@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotham Files - Operation Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico.ico">
+</head>
+<body>
+    <div class="night-sky" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <main class="app-shell" data-stage="1">
+        <header class="topbar"><span> V. ENTERPRISES</span><span class="topbar-status"><i></i> SECURE CONNECTION</span></header>
+        <section class="stage stage-access active" data-screen="1">
+            <p class="eyebrow">BATCOMPUTER // CLASSIFIED DATABASE</p>
+            <h1>BAT<br><em>COMPUTER</em></h1>
+            <p class="operation">OPERATION: BIRTHDAY <span>#2026-10-24</span></p>
+            <div class="terminal-card">
+                <p class="terminal-label">IDENTITY VERIFICATION REQUIRED</p><h2>WHO ARE YOU?</h2>
+                <form class="identity-form" id="identity-form">
+                    <label for="identity-input">ENTER CODENAME</label>
+                    <div class="identity-input-row"><input id="identity-input" type="text" autocomplete="off" spellcheck="false" placeholder="Enter your codename"><button class="command-button" type="submit">AUTHENTICATE</button></div>
+                </form>
+                <p class="feedback" id="identity-feedback" aria-live="polite">&gt; Waiting identification...</p>
+            </div>
+        </section>
+
+        <section class="stage stage-hud" data-screen="2" hidden>
+            <div class="batcomputer-image" aria-hidden="true"><img src="batcomputer-zxfi.png" alt=""></div><div class="hud-orbit" aria-hidden="true"></div><div class="hud-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="eyebrow">IDENTITY CONFIRMED // ACCESS GRANTED</p><h2 class="screen-title">BATCOMPUTER <em>// FILES</em></h2>
+            <p class="screen-copy">CatCat left you some files.</p>
+            <div class="file-grid" id="file-grid">
+                <button class="file-card" data-file="001"><span>FILE_001</span><strong>?</strong><small>OPEN FILE</small></button>
+                <button class="file-card" data-file="002"><span>FILE_002</span><strong>?</strong><small>OPEN FILE</small></button>
+                <button class="file-card" data-file="003"><span>FILE_003</span><strong>?</strong><small>OPEN FILE</small></button>
+                <button class="file-card" data-file="004"><span>FILE_004</span><strong>?</strong><small>OPEN FILE</small></button>
+                <button class="file-card" data-file="005"><span>FILE_005</span><strong>?</strong><small>OPEN FILE</small></button>
+                <button class="file-card" data-file="006"><span>FILE_006</span><strong>?</strong><small>OPEN FILE</small></button>
+            </div>
+            <div class="file-modal" id="file-modal" hidden><div class="file-modal-content"><div><p class="eyebrow" id="file-modal-label">FILE_001</p><img class="file-modal-image" id="file-modal-image" src="" alt=""></div><div class="file-modal-copy"><p id="file-modal-text"></p><button class="text-button" id="close-file">CLOSE FILE</button></div></div></div>
+            <button class="primary-button next-stage" data-next="3" disabled>PROCEED <span>-&gt;</span></button>
+        </section>
+
+        <section class="stage stage-hud" data-screen="3" hidden>
+            <div class="batcomputer-image" aria-hidden="true"><img src="batcomputer-zxfi.png" alt=""></div><div class="hud-orbit" aria-hidden="true"></div><div class="hud-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="eyebrow">BATCAVE // PRIVATE MESSAGE</p><h2 class="screen-title">PASSWORD <em>FOR PRIVATE MESSAGE</em></h2><p class="screen-copy">Catwoman left a single message. Some dates only make sense to two people.</p>
+            <div class="clue-room paper-room" id="clue-room">
+                <div class="room-label">PERSONAL ARCHIVE <span>BATCAT</span></div>
+                <article class="clue-paper">
+                    <span class="paper-stamp">CLASSIFIED</span>
+                    <p>An important date<br>for BatCat</p>
+                    <span class="paper-line"></span>
+                
+                </article>
+            </div>
+            <div class="code-readout"><span>PERSONAL DATE REQUIRED</span><strong>DD / MM</strong></div>
+            <form class="code-entry" id="code-entry"><label for="final-code">ENTER THE DATE</label><div><input id="final-code" type="text" inputmode="numeric" maxlength="5" autocomplete="off" placeholder="DD/MM"><button class="primary-button" id="submit-code" type="submit">ENTER</button></div><p class="feedback" id="code-feedback" aria-live="polite"></p></form>
+        </section>
+
+        <section class="stage letter-stage stage-hud" data-screen="4" hidden><div class="batcomputer-image" aria-hidden="true"><img src="batcomputer-zxfi.png" alt=""></div><div class="hud-orbit" aria-hidden="true"></div><p class="eyebrow">INCOMING MESSAGE // ENCRYPTED</p><div class="letter-heading"><span>FROM: CATWOMAN</span><span>TO: BATMAN</span></div><div class="letter-card"><p class="letter-date">GOTHAM CITY, 09.2026</p><p id="letter-text" class="letter-text"></p><p class="letter-signature" id="letter-signature" hidden><br><strong> </strong></p></div><button class="primary-button" id="open-final" hidden>OPEN FINAL FILE <span>-&gt;</span></button></section>
+
+        <section class="stage final-stage stage-hud" data-screen="5" hidden><div class="final-panel" aria-hidden="true"><img src="Bat%26Cat.jpg" alt=""></div><p class="eyebrow">FILE ULTIMATE // CAT_FILE</p><p class="operation">THE OPERATION WAS A SUCCESS</p><h2>FELIZ VIDA,<br><em>MORCEGÃO</em></h2><button class="text-button" id="restart">RESTART OPERATION</button></section>
+        <footer><span>GOTHAM FILES / 2026</span><span>NO. 126X</span></footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
